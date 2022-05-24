@@ -15,11 +15,11 @@ class CreateTutorComunitarioTable extends Migration
     {
         Schema::create('tutor_comunitario', function (Blueprint $table) {
             $table->bigInteger('cedula')->unsigned()->unique();
-            $table->string('nombre_1');
-            $table->string('nombre_2')->nullable();
-            $table->string('apellido_1');
-            $table->string('apellido_2')->nullable();
-            $table->string('telefono');
+            $table->string('nombre_1', 25);
+            $table->string('nombre_2', 25)->nullable();
+            $table->string('apellido_1', 25);
+            $table->string('apellido_2', 25)->nullable();
+            $table->string('telefono', 12);
             $table->string('direccion');
             $table->bigInteger('consejo_comunal_id')->unsigned();
             $table->bigInteger('cargo_id')->unsigned();

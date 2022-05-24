@@ -15,12 +15,12 @@ class CreateEstudianteTable extends Migration
     {
         Schema::create('estudiante', function (Blueprint $table) {
             $table->bigInteger('cedula')->unsigned()->unique();
-            $table->string('nombre_1');
-            $table->string('nombre_2')->nullable();
-            $table->string('apellido_1');
-            $table->string('apellido_2')->nullable();
-            $table->string('telefono');
-            $table->string('direccion');
+            $table->string('nombre_1', 25);
+            $table->string('nombre_2', 25)->nullable();
+            $table->string('apellido_1', 25);
+            $table->string('apellido_2', 25)->nullable();
+            $table->string('telefono', 12);
+            $table->string('direccion', 100);
             $table->string('correo')->unique();      
               
             $table->timestamps();
