@@ -14,7 +14,8 @@ class CreateEstudianteTable extends Migration
     public function up()
     {
         Schema::create('estudiante', function (Blueprint $table) {
-            $table->biginteger('cedula')->unsigne()->unique();
+            $table->id();
+            $table->string('cedula')->unique();
             $table->string('nombre_1');
             $table->string('nombre_2')->nullable();
             $table->string('apellido_1');

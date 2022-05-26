@@ -14,7 +14,8 @@ class CreateTutorComunitarioTable extends Migration
     public function up()
     {
         Schema::create('tutor_comunitario', function (Blueprint $table) {
-            $table->bigInteger('cedula')->unsigned();
+            $table->id();
+            $table->string('cedula')->unique();
             $table->string('nombre_1');
             $table->string('nombre_2')->nullable();
             $table->string('apellido_1');
