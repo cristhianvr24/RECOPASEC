@@ -23,9 +23,11 @@ class CreateTutorInstitucionalTable extends Migration
             $table->string('telefono');
             $table->string('correo')->unique();
             $table->bigInteger('especialidadId')->unsigned();
+            $table->bigInteger('departamentoId')->unsigned();
             $table->timestamps();
             //relaciones de la migracion
             $table->foreign('especialidadId')->references('id')->on('especialidad')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('departamentoId')->references('id')->on('departamento')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
