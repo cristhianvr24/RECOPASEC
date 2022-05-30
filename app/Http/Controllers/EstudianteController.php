@@ -28,7 +28,16 @@ class EstudianteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'cedula' => 'required|max:9',
+            'nombre_1' => 'required|max:15',
+            'nombre_2' => 'required|max:15',
+            'apellido_1' => 'required|max:15',
+            'apellido_2' => 'required|max:15',
+            'telefono' => 'required|max:12',
+            'email' => 'required|max:100',
+            'direccion'=> 'required|max:100'
+        ]);
     }
 
     /**
