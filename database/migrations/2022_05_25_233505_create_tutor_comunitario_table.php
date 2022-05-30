@@ -21,7 +21,7 @@ class CreateTutorComunitarioTable extends Migration
             $table->string('apellido_1');
             $table->string('apellido_2')->nullable();
             $table->string('telefono');
-            $table->string('correo')->unique();
+            $table->string('email')->unique();
             $table->bigInteger('consejo_comunalId')->unsigned();
             $table->bigInteger('cargoId')->unsigned();
             $table->timestamps();

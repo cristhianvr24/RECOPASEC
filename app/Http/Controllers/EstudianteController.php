@@ -14,8 +14,10 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-        //
-        return Estudiante::all();
+        $estudiante = Estudiante::all();
+
+        $data = ['success'=>true, 'estudiantes'=> $estudiante];
+        return response()->json($data, 200, []);
     }
 
     /**

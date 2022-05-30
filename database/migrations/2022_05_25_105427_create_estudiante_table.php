@@ -21,7 +21,7 @@ class CreateEstudianteTable extends Migration
             $table->string('apellido_1');
             $table->string('apellido_2')->nullable();
             $table->string('telefono');
-            $table->string('correo')->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
