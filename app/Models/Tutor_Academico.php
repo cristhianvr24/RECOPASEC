@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tutor_Comunitario extends Model
+class Tutor_Academico extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -16,11 +16,13 @@ class Tutor_Comunitario extends Model
         'Segundo apellido',
         'telefono',
         'email',
-        'consejo comunal',
-        'cargo'
+        'condicion',
+        'especialidad'
     ];
-    public function Estado(){
-        return $this->belongsTo(Estado::class);
+    public function Condicion(){
+        return $this->belongsTo(Condicion::class);
+    }
+    public function Especialidad(){
+        return $this->belongsTo(Especialidad::class);
     }
 }
-
