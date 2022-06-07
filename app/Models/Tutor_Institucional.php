@@ -24,7 +24,4 @@ class Tutor_Institucional extends Model
     }public function Departamento(){
         return $this->belongsTo(Departamento::class);
     }
-    {
-        # code...
-    }
 }
